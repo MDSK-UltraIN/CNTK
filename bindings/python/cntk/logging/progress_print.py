@@ -480,7 +480,6 @@ class TensorBoardProgressWriter(cntk_py.ProgressWriter):
                 value = core.Value._as_best_data_type(k, data[k])
                 ndav = core.NDArrayView.from_data(value, cpu())
                 self.writer.write_image(str(name), ndav, int(step))
-            self.writer.write_image(str(name), value, int(step))
 
     def flush(self):
         '''Make sure that any outstanding records are immediately persisted.'''
