@@ -178,7 +178,7 @@ namespace CNTK
                 throw;
             }
         }
-  
+
         void TensorBoardFileWriter::WriteImage(const std::wstring& name, NDArrayViewPtr NDPtr, uint64_t step)
         {
             assert(NDPtr != nullptr);
